@@ -5,16 +5,22 @@ var ejs = require('ejs')
 
 var app = express()
 
+// knex = knex({
+//     client: 'pg',
+//     connection:{
+//         host: 'postgresql-objective-70868',
+//         user: 'root',
+//         password: 'test',
+//         database: 'quizapp'
+//     }
+// });
 knex = knex({
     client: 'pg',
     connection:{
-        host: 'postgresql-objective-70868',
-        user: 'root',
-        password: 'test',
-        database: 'quizapp'
+        host: process.env.DATABASE_URL,
+        ssl: true
     }
 });
-
 app.use('/public', express.static('static'))
 app.set('view engine', 'ejs');
 
