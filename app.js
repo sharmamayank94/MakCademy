@@ -5,22 +5,23 @@ var ejs = require('ejs')
 
 var app = express()
 
-// knex = knex({
-//     client: 'pg',
-//     connection:{
-//         host: 'localhost',
-//         user: 'postgres',
-//         password: 'test',
-//         database: 'quizapp'
-//     }
-// });
 knex = knex({
     client: 'pg',
     connection:{
-        connectionString: process.env.DATABASE_URL,
-        ssl: true
+        host: 'localhost',
+        user: 'postgres',
+        password: 'test',
+        database: 'quizapp'
     }
 });
+
+// knex = knex({
+//     client: 'pg',
+//     connection:{
+//         connectionString: process.env.DATABASE_URL,
+//         ssl: true
+//     }
+// });
 app.use('/public', express.static('static'))
 app.set('view engine', 'ejs');
 
@@ -33,6 +34,9 @@ app.get('/history', (req, res)=>{
     .then(data=>{
         res.render('history', {data, sets:[]});
     })
+    .catch(err=>{
+        res.send(err);
+    });
 });
 
 app.get('/history/:sub/:page_no', (req, res)=>{
@@ -44,6 +48,9 @@ app.get('/history/:sub/:page_no', (req, res)=>{
     .then(sets=>{
         console.log("Set is: ",sets);
         res.render('history',{data:['Ancient', 'Medieval', 'Modern'], sets, currentsub, page_no, questions:[]});
+    })
+     .catch(err=>{
+        res.send(err);
     });     
 });
 
@@ -59,7 +66,10 @@ app.get('/history/:sub/:page_no/:set_no', (req, res)=>{
     .then(questions=>{
         console.log(questions);
         res.render('questions', {data:['Ancient', 'Medieval', 'Modern'], sets:[], currentsub, page_no, questions});
-    });     
+    })
+     .catch(err=>{
+        res.send(err);
+    });;     
 });
 
 app.listen(process.env.PORT || 8080, (a, b)=>{
