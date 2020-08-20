@@ -56,6 +56,6 @@ app.get('/history/:sub/:page_no/:set_no', (req, res)=>{
     });     
 });
 
-app.listen(8080, (a, b)=>{
+app.listen(process.env.PORT || 8080, (a, b)=>{
     console.log("server is listening on port 8080");
 })
