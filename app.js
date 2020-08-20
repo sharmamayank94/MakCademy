@@ -6,9 +6,9 @@ var ejs = require('ejs')
 var app = express()
 
 knex = knex({
-    client: 'mysql',
+    client: 'pg',
     connection:{
-        host: 'localhost',
+        host: 'postgresql-objective-70868',
         user: 'root',
         password: 'test',
         database: 'quizapp'
