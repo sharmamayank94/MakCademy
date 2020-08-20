@@ -1,0 +1,54 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel = "stylesheet" href="/public/styles/home.css" />
+        <title>Sarvgyan</title>
+    </head>
+    <body>
+        <div class="header">
+            <!-- <img src="/public/images/logo.png" alt="" class="logo"> -->
+            <p class="quote"></p>
+            <img src="/public/logo.svg" alt="" class="logo">
+            <p class="quote">One should know it all</p>
+        </div>
+
+        <%-include('partials/navbar.ejs')%>
+
+        <div class="sidebar">
+            <a href="">About Us</a>
+            <a href="">Indian Art and Culture</a>
+            <a href="">History</a>
+            <a href="">Economics</a>
+            <a href="">Political Sciene</a>
+        </div>
+        <div class="homepage">
+            <div class = "homecard">          
+                <p>INDIAN ART AND CULTURE</p>   
+                <a href = "#">Start</a>
+           </div>
+        
+           <div class = "homecard">          
+                <p>INDIAN ART AND CULTURE</p>   
+                <a href = "#">Start</a>
+           </div>
+           <div class = "homecard">          
+                <p>INDIAN ART AND CULTURE</p>   
+                <a href = "#">Start</a>
+            </div>
+            <div class = "homecard">          
+                <p>INDIAN ART AND CULTURE</p>   
+                <a href = "#">Start</a>
+            </div>
+            <div class = "homecard">          
+                <p>INDIAN ART AND CULTURE</p>   
+                <a href = "#">Start</a>
+            </div>
+        </div>
+       
+    <%-include("partials/footer.ejs")%>
+
+        
+    </body>
+    <script src="/public/scripts/navigators.js"></script>    
+</html>

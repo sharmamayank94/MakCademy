@@ -1,0 +1,48 @@
+.questionscontainer{
+    background-color: white;
+    margin: 20px 250px;
+    padding: 20px;
+}
+
+.question{
+    margin: 120px 0px;
+    font-size: 26px;
+    font-weight: 500;
+}
+
+.optionset{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 20px;
+}
+
+
+
+.optioncontainer input{
+
+    visibility: hidden;
+    
+}
+
+
+
+.optioncontainer label{
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    background-color: aliceblue;
+    border: 2px solid rgb(0, 67, 143);
+    display: inline-block;
+    width: 80%;
+}
+
+.option:checked  + label   {
+    background-color: rgb(246, 255, 117);
+    
+
+}
+
+.submitbuttoncontainer{
+    display: flex;
+    justify-content: center;
+}

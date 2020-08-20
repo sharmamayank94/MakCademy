@@ -1,0 +1,74 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel = "stylesheet" href="/public/styles/home.css" />
+        <link rel = "stylesheet" href="/public/styles/quiz.css" />
+        <title>Sarvgyan</title>
+    </head>
+    <body>
+        <div class="header">
+            <p class="quote"></p>
+            <img src="/public/logo.svg" alt="" class="logo">
+            <p class="quote">One should know it all</p>
+        </div>
+
+        <%-include('partials/navbar.ejs')%>
+
+        <div class="sidebar">
+            <% data.forEach(classification=>{%>
+                <% if(currentsub.toLowerCase()==classification.toLowerCase()){ console.log(currentsub)%>
+                    <a href="/history/<%=classification%>/1" class="highlight">
+                <%}else{console.log(currentsub)%>
+                    <a href="/history/<%=classification%>/1">
+                <%}%>
+                
+                    <%=classification%> History
+                </a>
+            <%});%>    
+        </div>
+        
+        
+        <%if(questions.length>0){%>
+            <div class="questionscontainer">
+                <%questions.forEach(question=>{%>
+                    <div class="question">
+                        <p><%=question.question_no%>. <%=question.question%></p>
+                        <div class="optionset">
+                            <div class="optioncontainer">
+                                <input type="radio" class="option" value = "<%=question.option_a%>" id = "<%=question.question_no%><%=question.option_a%>" name="option<%=question.question_no%>">
+                                <label for="<%=question.question_no%><%=question.option_a%>"><%=question.option_a%></label>
+                            </div>
+                            
+                            <div class="optioncontainer">
+                                <input type="radio" class="option" value = "<%=question.option_b%>" id = "<%=question.question_no%><%=question.option_b%>" name="option<%=question.question_no%>">
+                                <label for="<%=question.question_no%><%=question.option_b%>"><%=question.option_b%></label>
+                            </div>
+                            <div class="optioncontainer">
+                                <input type="radio" class="option" value = "<%=question.option_c%>" id = "<%=question.question_no%><%=question.option_c%>" name="option<%=question.question_no%>">
+                                <label for="<%=question.question_no%><%=question.option_c%>"><%=question.option_c%></label>
+                            </div>
+
+                            <div class="optioncontainer">
+                                <input type="radio" class="option" value = "<%=question.option_d%>" id = "<%=question.question_no%><%=question.option_d%>" name="option<%=question.question_no%>">
+                                <label for="<%=question.question_no%><%=question.option_d%>"><%=question.option_d%></label>
+                            </div>
+                            
+                            <div class="answer">
+                                <%=question.correct_answer%>
+                            </div>    
+                        </div>                      
+                    </div>
+                              
+                <%});%>
+                <div class="submitbuttoncontainer">
+                    <button onclick="checkanswers()">Submit</button>
+                </div>
+            </div>
+        <%}%>
+        
+        
+    </body>
+    <script src="/public/scripts/navigators.js"></script>
+    <script src="/public/scripts/questions.js"></script>     
+</html>

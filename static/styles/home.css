@@ -1,0 +1,174 @@
+body{
+    margin:0px; 
+    background-color: aliceblue;
+}
+
+.header{
+    padding: 10px 50px;
+    margin: 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: gray;
+    background-color: white;
+}
+
+.header .logo{
+    width: 300px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.header p{
+    margin: 0px;   
+    vertical-align: middle;
+    display: inline-block;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+    color: rgb(5, 173, 61);
+    font-size: 50px;
+}
+.header .quote{
+    font-size: 20px;
+    color: black;
+    margin-right: 150px; 
+}
+.cover{
+    padding: 10px;
+    width: 1600px;
+}
+.navbar{
+    background-color: rgb(0, 100, 255);
+    background-color: rgb(61, 61, 61);
+   
+    box-shadow: 5px 5px 5px rgb(126, 126, 126);   
+    display: flex;
+    font-size: 25px;
+    /* justify-content: center; */
+}
+.navbar .sidebarbutton{
+    color: white;
+    font-size: 25px;
+}
+.navbar .sidebarbutton:hover{
+    color: black;
+}
+.navbar div{
+    padding: 10px 25px;
+}
+
+.navbar div:hover{
+    background-color: white;    
+}
+.navbar div:hover a{
+    color: black;
+}
+.navbar div a{
+    font-size: 20px;
+    text-decoration: none;
+    /* color: rgb(0, 16, 240); */
+    color: white;
+    font-weight: 550;
+    /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+    font-family:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.sidebar{
+    width: 200px;
+    background-color: ghostwhite;
+    overflow: hidden;
+    padding: 0px;
+    height: 100vh;
+    float: left;
+    animation-duration: 1s;
+    transition-duration: 0.4s;
+   
+}
+
+
+
+.sidebarhidden{
+    width: 0px; 
+}
+
+.sidebar a{
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+    display: block;
+    margin: 20px;
+}
+
+.sets{
+    padding: 50px;
+    margin: 50px 350px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: auto auto auto ;
+}
+
+.set{
+    margin: 20px;
+    text-align: center;
+    padding: 20px;
+    height: 150px;
+    max-width: 150px;
+    background-color: rgb(0, 158, 158);
+    border-radius: 25px 0px;
+}
+
+.set p{
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 25px;
+}
+
+.sidebar .highlight{
+    margin: 0px;
+    background-color: ghostwhite;
+    color: black;
+    display:block ;
+    padding: 50px;
+    
+}
+
+.homepage{
+    display: grid;
+    margin: auto;
+    margin-top: 60px;
+    width: 70%;
+    grid-template-columns: auto auto;
+    justify-content: center;
+}
+.homecard{
+    display: grid;
+    margin: 40px 40px;
+    padding: 50px;
+    background-color: white;
+    grid-template-columns: auto;
+    width: 400px;
+    box-shadow: 5px 5px 10px rgb(173, 173, 173);
+    border-radius: 5px;
+}
+
+.homecard p{
+    font-size: 30px;
+    text-align: center;
+    
+}
+
+.homecard a{
+    display: inline-block;
+    margin: auto;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 15px;
+    color: white;
+    background-color: rgb(0, 185, 0);
+}
+
+footer{
+    color: white;
+    height: 200px;
+    padding: 50px;
+    background-color: rgb(61, 61, 61);
+}
