@@ -8,8 +8,8 @@ var app = express()
 // knex = knex({
 //     client: 'pg',
 //     connection:{
-//         host: 'postgresql-objective-70868',
-//         user: 'root',
+//         host: 'localhost',
+//         user: 'postgres',
 //         password: 'test',
 //         database: 'quizapp'
 //     }
@@ -29,7 +29,7 @@ app.get('/', (req, res)=>{
 });
 
 app.get('/history', (req, res)=>{
-    knex('history').select('Classification').distinct('Classification')
+    knex('history').select('classification').distinct('classification')
     .then(data=>{
         res.render('history', {data, sets:[]});
     })
@@ -40,9 +40,9 @@ app.get('/history/:sub/:page_no', (req, res)=>{
     var page_no = req.params.page_no;
     knex('history').select('title', 'set_no')
     .distinct('title')
-    .where('Classification', '=', currentsub).andWhere('page_no', '=', page_no)
+    .where('classification', '=', currentsub).andWhere('page_no', '=', page_no)
     .then(sets=>{
-        
+        console.log("Set is: ",sets);
         res.render('history',{data:['Ancient', 'Medieval', 'Modern'], sets, currentsub, page_no, questions:[]});
     });     
 });
@@ -53,7 +53,7 @@ app.get('/history/:sub/:page_no/:set_no', (req, res)=>{
     var set_no = req.params.set_no;
 
     knex('history').select('*')
-    .where('Classification', '=', currentsub)
+    .where('classification', '=', currentsub)
     .andWhere('page_no', '=', page_no)
     .andWhere('set_no', '=', set_no)
     .then(questions=>{
