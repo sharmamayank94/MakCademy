@@ -31,6 +31,41 @@ app.get('/', (req, res)=>{
     res.render('home.ejs');
 });
 
+
+app.get('/economics/:page_no', (req, res)=>{
+    var page_no = req.params.page_no;
+    knex('economics').select('title', 'set_no')
+    .where('page_no', '=', page_no)
+    .then(data=>{
+        //console.log(data);
+       res.render('economics', {sets:data, page_no:page_no});
+    })
+    .catch(err=>{
+        res.send(err);
+    });
+});
+
+
+app.get('/economics/:page_no/:set_no', (req, res)=>{
+    
+    var page_no = req.params.page_no;
+    var set_no = req.params.set_no;
+
+    knex('economics').select('*')
+    
+    .where('page_no', '=', page_no)
+    .andWhere('set_no', '=', set_no)
+    .then(questions=>{
+        //res.send("hey there" + questions);
+        res.render('questions', {data:[], questions: questions});
+    })
+     .catch(err=>{
+        res.send(err);
+    });;     
+});
+
+
+
 app.get('/history', (req, res)=>{
     knex('history').select('classification').distinct('classification')
     .then(data=>{
@@ -62,6 +97,7 @@ app.get('/history/:sub/:page_no/:set_no', (req, res)=>{
     var set_no = req.params.set_no;
 
     knex('history').select('*')
+    .orderBy('question_no')
     .where('classification', '=', currentsub)
     .andWhere('page_no', '=', page_no)
     .andWhere('set_no', '=', set_no)

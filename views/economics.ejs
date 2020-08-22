@@ -1,0 +1,33 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel = "stylesheet" href="/public/styles/home.css" />
+        <link rel = "stylesheet" href="/public/styles/quiz.css" />
+        <title>Sarvgyan</title>
+    </head>
+    <body>
+        <div class="header">
+            <p class="quote"></p>
+            <img src="/public/logo.png" alt="" class="logo">
+            <p class="quote">One should know it all</p>
+        </div>
+
+        <%-include('partials/navbar.ejs')%>
+
+       
+        <%if(sets.length>0){%>
+            <div class="sets">
+                <%sets.forEach(set=>{%>
+
+                    <div class="set">
+                        <a href="<%=page_no%>/<%=set.set_no%>"><%=set.title%></a>
+                    </div>
+                <%})%>
+            </div>
+        <%}%>
+        
+       
+    </body>
+    <script src="/public/scripts/navigators.js"></script>     
+</html>

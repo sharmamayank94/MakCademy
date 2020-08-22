@@ -1,12 +1,23 @@
-insert into history values('Ancient History', 1, 2, 'Which among the following Kavya of Sanskrit, deal with court intrigues & access to power of Chandragupta Maurya?', 'Mrichhakatika', 'Ritusamhara', 'Kumarasambhava', 'Mudrarakshahsa', 'Mudrarakshahsa');
-insert into history values('Ancient History', 1, 3, 'On which of the following systems of Hindu Philosophy , Shankaracharya wrote commentary in 9th century AD?', 'Sankhya', 'Vaisheshika', 'Uttarmimansa', 'Yoga', 'Uttarmimansa');
-insert into history values('Ancient History', 1, 4, 'The eighth-century tripartite power struggle was among which of the following?', 'Cholas, Rastrakutas and Yadavas', 'Chalukyas, Pallavas and Pandyas', 'Cholas, Pandyas and Chalukyas', 'Chalukyas, Pallavas and Yadavas', 'Chalukyas, Pallavas and Pandyas');
-insert into history values('Ancient History', 1, 5, 'Which among the following is not correct?', 'The capital of pandyas was Madurai', ' The capital of Cheras was Vanchi', 'Capital of the Videha Kingdom – Mithila', 'Capital of Gahadwal Dynasty – Kannauj', ' Capital of the Videha Kingdom – Mithila');
-insert into history values('Ancient History', 1, 6, 'Which king started the organization of Kumbh fair at Allahabad?', 'Harshavardhana', 'Dhruvasena Ii', ' Narshimhvarman', 'Akabar', ' Harshavardhana');
-insert into history values('Ancient History', 1, 7, 'Upnishads are books on :', 'Politics', 'Philosophy', 'Medicine', 'Social Life', ' Philosophy');
-insert into history values('Ancient History', 1, 8, 'Who was the first Indian ruler who had territory outside India?', 'Ashoka', 'Samudragupta', 'Akbar', 'Kanishka', 'Kanishka');
-insert into history values('Ancient History', 1, 9, 'Which of the following statement is wrong?', 'Sunga dynasty was founded by pushyamitra', 'Ashoka the great Mauryan king died in 332 BC', ' Ashoka invaded the kalinga in 261 BC', ' Chandragupta Maurya earned the title of the Liberator.', 'Ashoka the great Mauryan king died in 332 BC');
-insert into history values('Ancient History', 1, 10, 'Who among the following was worshipped during Early Vedic Civilization?', 'Varuna', 'Indra', 'Surya', 'All of the Above', 'All of the Above');
+insert into history values('ancient', 1, 2, 'Which among the following Kavya of Sanskrit, deal with court intrigues & access to power of Chandragupta Maurya?', 'Mrichhakatika', 'Ritusamhara', 'Kumarasambhava', 'Mudrarakshahsa', 'Mudrarakshahsa','set 1', 1);
+
+insert into history values('ancient', 1, 3, 'On which of the following systems of Hindu Philosophy , Shankaracharya wrote commentary in 9th century AD?', 'Sankhya', 'Vaisheshika', 'Uttarmimansa', 'Yoga', 'Uttarmimansa','set 1', 1);
+
+insert into history values('ancient', 1, 4, 'The eighth-century tripartite power struggle was among which of the following?', 'Cholas, Rastrakutas and Yadavas', 'Chalukyas, Pallavas and Pandyas', 'Cholas, Pandyas and Chalukyas', 'Chalukyas, Pallavas and Yadavas', 'Chalukyas, Pallavas and Pandyas','set 1', 1);
+
+insert into history values('ancient', 1, 5, 'Which among the following is not correct?', 'The capital of pandyas was Madurai', ' The capital of Cheras was Vanchi', 'Capital of the Videha Kingdom – Mithila', 'Capital of Gahadwal Dynasty – Kannauj', ' Capital of the Videha Kingdom – Mithila','set 1', 1);
+
+insert into history values('ancient', 1, 6, 'Which king started the organization of Kumbh fair at Allahabad?', 'Harshavardhana', 'Dhruvasena Ii', ' Narshimhvarman', 'Akabar', ' Harshavardhana','set 1', 1);
+
+insert into history values('ancient', 1, 7, 'Upnishads are books on :', 'Politics', 'Philosophy', 'Medicine', 'Social Life', ' Philosophy','set 1', 1);
+
+insert into history values('ancient', 1, 8, 'Who was the first Indian ruler who had territory outside India?', 'Ashoka', 'Samudragupta', 'Akbar', 'Kanishka', 'Kanishka','set 1', 1);
+
+insert into history values('ancient', 1, 9, 'Which of the following statement is wrong?', 'Sunga dynasty was founded by pushyamitra', 'Ashoka the great Mauryan king died in 332 BC', ' Ashoka invaded the kalinga in 261 BC', ' Chandragupta Maurya earned the title of the Liberator.', 'Ashoka the great Mauryan king died in 332 BC','set 1', 1);
+
+insert into history values('ancient', 1, 10, 'Who among the following was worshipped during Early Vedic Civilization?', 'Varuna', 'Indra', 'Surya', 'All of the Above', 'All of the Above','set 1', 1);
+
+
+insert into history values('ancient', 1, 1, 'Which among the following is not a correct pair?', 'Elephanta Caves - Mauyra Era', 'Khajuraho - Chandellas', 'Mahabalipuram - Pallava Rulers', 'Ellora Caves - Rastrakuta Rulers', 'Elephanta Caves - Mauyra Era','set 1', 1);
 
 
 insert into history values('Medieval History', 1, 1, 'The death of Mughal Emperor Aurangzeb occurred at which among the following places?', 'Agra', 'Bijapur', 'Ahmednagar', 'Pune', 'Ahmednagar');

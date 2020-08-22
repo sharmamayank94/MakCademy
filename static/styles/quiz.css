@@ -45,4 +45,21 @@
 .submitbuttoncontainer{
     display: flex;
     justify-content: center;
+
+}
+
+.submitbuttoncontainer button{
+    background-color: rgb(115, 230, 0);
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 2px 2px 2px 2px;
+
+}
+
+#score
+{
+    display: flex;
+    justify-content: center;
+    font-size: 22px;
+    margin-bottom: 20px;
 }

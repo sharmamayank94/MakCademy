@@ -15,7 +15,7 @@ var navbar = document.querySelector('.navbar');
                 navbar.style="";
                 sidebar.style="";
             }
-            console.log(sidebar.getBoundingClientRect().top);
+          //  console.log(sidebar.getBoundingClientRect().top);
             
         });
     

@@ -1,0 +1,5 @@
+create table economics (classification varchar(80), set_no SMALLINT, question_no SMALLINT, question TEXT, option_a text, option_b text, option_c text, option_d text, correct_answer text, title VARCHAR(255), page_no SMALLINT);
+
+Insert into economics values('', 1, 1, 'Who gave the first blueprint of Indian planning through his book the planned economy of India?', 'Avdeshir Dalal', 'M Visvesvarya', 'JRD Tata', 'GD Birla', 'M Visvesvarya', 'Planning in India', 1);
+
+Insert into economics values('', 2, 1, 'Who developed HYV variety of seeds?', 'Bill Grim', 'James Bell', 'Norman Borlaug', 'Priste de Carle', 'Norman Borlaug', 'Agriculture and Food Management', 1);

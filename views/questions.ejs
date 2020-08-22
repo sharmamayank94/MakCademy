@@ -13,9 +13,10 @@
             <p class="quote">One should know it all</p>
         </div>
 
-        <%-include('partials/navbar.ejs')%>
+       <%-include('partials/navbar.ejs')%>
 
-        <div class="sidebar">
+        
+         <div class="sidebar">
             <% data.forEach(classification=>{%>
                 <% if(currentsub.toLowerCase()==classification.toLowerCase()){ console.log(currentsub)%>
                     <a href="/history/<%=classification%>/1" class="highlight">
@@ -27,8 +28,12 @@
                 </a>
             <%});%>    
         </div>
-        
-        
+
+
+
+
+
+
         <%if(questions.length>0){%>
             <div class="questionscontainer">
                 <%questions.forEach(question=>{%>
@@ -37,21 +42,21 @@
                         <div class="optionset">
                             <div class="optioncontainer">
                                 <input type="radio" class="option" value = "<%=question.option_a%>" id = "<%=question.question_no%><%=question.option_a%>" name="option<%=question.question_no%>">
-                                <label for="<%=question.question_no%><%=question.option_a%>"><%=question.option_a%></label>
+                                <label for="<%=question.question_no%><%=question.option_a%>" id = "<%=question.option_a.replace(/\s/g, '')%><%=question.question_no%>"><%=question.option_a%></label>
                             </div>
                             
                             <div class="optioncontainer">
                                 <input type="radio" class="option" value = "<%=question.option_b%>" id = "<%=question.question_no%><%=question.option_b%>" name="option<%=question.question_no%>">
-                                <label for="<%=question.question_no%><%=question.option_b%>"><%=question.option_b%></label>
+                                <label for="<%=question.question_no%><%=question.option_b%>" id = "<%=question.option_b.replace(/\s/g, '')%><%=question.question_no%>"><%=question.option_b%></label>
                             </div>
                             <div class="optioncontainer">
                                 <input type="radio" class="option" value = "<%=question.option_c%>" id = "<%=question.question_no%><%=question.option_c%>" name="option<%=question.question_no%>">
-                                <label for="<%=question.question_no%><%=question.option_c%>"><%=question.option_c%></label>
+                                <label for="<%=question.question_no%><%=question.option_c%>" id = "<%=question.option_c.replace(/\s/g, '')%><%=question.question_no%>"><%=question.option_c%></label>
                             </div>
 
                             <div class="optioncontainer">
                                 <input type="radio" class="option" value = "<%=question.option_d%>" id = "<%=question.question_no%><%=question.option_d%>" name="option<%=question.question_no%>">
-                                <label for="<%=question.question_no%><%=question.option_d%>"><%=question.option_d%></label>
+                                <label for="<%=question.question_no%><%=question.option_d%>" id = "<%=question.option_d.replace(/\s/g, '')%><%=question.question_no%>"><%=question.option_d%></label>
                             </div>
                             
                             <div class="answer">
@@ -61,14 +66,30 @@
                     </div>
                               
                 <%});%>
-                <div class="submitbuttoncontainer">
-                    <button onclick="checkanswers()">Submit</button>
-                </div>
+            
+
+            <div id = "score">
+                
+            </div>
+
+            
+            <div class="submitbuttoncontainer">
+                <button onclick="checkanswers()">Submit</button>
+            </div>
+
+            
+
+
             </div>
         <%}%>
+
+      
+        
         
         
     </body>
-    <script src="/public/scripts/navigators.js"></script>
-    <script src="/public/scripts/questions.js"></script>     
+
+        <script src="/public/scripts/navigators.js"></script>
+        <script src="/public/scripts/questions.js"></script>  
+       
 </html>
